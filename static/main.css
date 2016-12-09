@@ -1,31 +1,39 @@
 
+html {
+  font-size: 16px;
+}
+
 html, body, .centerwrap {
     height: 100%;
 }
 
+img {max-width:100%;}
 body {
     padding: 0;
     margin: 0;
     font-family: 'Helvetica Neue', Helvetica, Arial, 'Microsoft YaHei', sans-serif;
     font-weight: lighter;
     background-image: radial-gradient(ellipse, rgba(255, 255, 255, 1), rgba(200, 200, 200, .7));
+    font-size: 62.5%; /* 1em = 10px */
 }
 
 .centerwrap {
+  font-size: 1.7em;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .center {
-    position: fixed;
-    /*left: 20%;
+    /*position: fixed;
+    left: 20%;
     right: 20%;
     top: 20%;*/
     text-align: center;
 }
 
 .center img {
-    max-width: 100%;
+    width: 30.985915493%
+    height: auto;
     animation-name: slide-top;
     animation-duration: 0.8s;
     animation-timing-function: ease-out;
@@ -42,6 +50,9 @@ body {
     animation-fill-mode: forwards;
 }
 
+.center .footer {
+  font-size: 0.70588235294em;
+}
 .container {
     position: absolute;
     right: 0;
@@ -68,4 +79,12 @@ body {
     100% {
         opacity: 1;
     }
+}
+@media screen and (max-height: 328px) {
+  .center img {
+    width: 25%;
+  }
+  .centerwrap {
+    font-size: 1.5em;
+  }
 }
